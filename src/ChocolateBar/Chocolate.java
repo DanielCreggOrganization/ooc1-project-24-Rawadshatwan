@@ -1,15 +1,52 @@
 package ChocolateBar;
 
 public class Chocolate {
-        protected String Brand;
-        protected String Flavour;
-        protected String Price;
-        protected int Quntity;
+
+        //instance    
+        private int chocolateNumber;
+        private String brand;
+        private float price;
+        private long pieces;
         
-                
+        //getter and Setter
     
-        public void Bar(){
-            System.err.println("This is a" + Brand + "with a" + Flavour + "taste");
+
+        public int getChocolateNumber(){
+            return this.chocolateNumber;
         }
+
+        public void setChocolateNumber(int chocolateNumber) {
+            this.chocolateNumber = chocolateNumber;
+        }
+        
+
+        public String getBrand(){
+            return this.brand;
+        }
+
+        public void setBrand(String brand) {
+            this.brand = brand;
+        }
+        
+        public float getPrice(){
+            return this.price;
+        }
+
+        public void setPrice(float price) {
+            this.price = price;
+        }
+
+        public long getPieces(){
+            return this.pieces;
+        }
+
+        public void setPieces(long pieces) {
+            this.pieces = pieces;
+        }
+
+
+    
+        }
+
             
-}
+
