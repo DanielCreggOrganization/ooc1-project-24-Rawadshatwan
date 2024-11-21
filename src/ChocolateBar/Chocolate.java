@@ -5,14 +5,14 @@ public class Chocolate {
         //instance    
         private int chocolateNumber;
         private String brand;
-        private float price;
+        private float priceEur;
         private long pieces;
         
         //Constructor
-        public Chocolate(int chocolateNumber, String brand, float price, long pieces){
+        public Chocolate(int chocolateNumber, String brand, float priceEur, long pieces){
             this.chocolateNumber = chocolateNumber;
             this.brand = brand;
-            this.price = price;
+            this.priceEur = priceEur;
             this.pieces = pieces;
         }
 
@@ -34,12 +34,12 @@ public class Chocolate {
             this.brand = brand;
         }
         
-        public float getPrice(){
-            return this.price;
+        public float getPriceEur(){
+            return this.priceEur;
         }
 
-        public void setPrice(float price) {
-            this.price = price;
+        public void setPriceEur(float price) {
+            this.priceEur = price;
         }
 
         public long getPieces(){
