@@ -7,6 +7,9 @@ public class Main {
 
 public static void main(String[] args) {
 
+    Scanner userInput = new Scanner(System.in);
+    int userSelection = 0;
+
    
    while (true) {
     System.out.println("");
@@ -25,7 +28,7 @@ public static void main(String[] args) {
     if (userSelection == 5) {
         System.out.println("Chocolate Bar Plaza is melting");
         userInput.close();
-        break
+        break;
     }
 }
 
