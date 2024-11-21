@@ -8,9 +8,15 @@ public class Chocolate {
         private float price;
         private long pieces;
         
-        //getter and Setter
-    
+        //Constructor
+        public Chocolate(int chocolateNumber, String brand, float price, long pieces){
+            this.chocolateNumber = chocolateNumber;
+            this.brand = brand;
+            this.price = price;
+            this.pieces = pieces;
+        }
 
+        //Getter and Setter
         public int getChocolateNumber(){
             return this.chocolateNumber;
         }
@@ -46,7 +52,7 @@ public class Chocolate {
 
 
     
-        }
+}
 
             
 
