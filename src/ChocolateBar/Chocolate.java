@@ -2,15 +2,18 @@ package ChocolateBar;
 
 public class Chocolate {
 
-        //instance    
-        private int chocolateNumber;
+        //instance
+        //**we made it public so your other folders could reference it! */    
+        public static int chocolateNumber[] = 
+        { 0,1,2,3,4
+            
+        };                                                                                                                       ];
         private String brand;
         private float priceEur;
         private long pieces;
         
         //Constructor
-        public Chocolate(int chocolateNumber, String brand, float priceEur, long pieces){
-            this.chocolateNumber = chocolateNumber;
+        public Chocolate(String brand, float priceEur, long pieces){
             this.brand = brand;
             this.priceEur = priceEur;
             this.pieces = pieces;

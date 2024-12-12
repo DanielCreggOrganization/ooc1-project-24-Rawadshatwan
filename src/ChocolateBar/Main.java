@@ -1,5 +1,6 @@
 package ChocolateBar;
 
+import java.nio.channels.NetworkChannel;
 import java.util.Scanner;
 
 
@@ -10,7 +11,9 @@ public static void main(String[] args) {
     Scanner userInput = new Scanner(System.in);
     int userSelection = 0;
 
-   
+    
+    chocolateNumber[] examplen[]= new chocolateNumber();
+
    while (true) {
     System.out.println("");
     System.out.println("###############################################");
@@ -25,29 +28,6 @@ public static void main(String[] args) {
 
     userSelection = userInput.nextInt();
 
-    if (userSelection == 1) {
-        System.out.println("Choose a Chocolate Bar");
-        userInput.close();
-        continue;
-    }
-
-    if (userSelection == 2) {
-        System.out.println("");
-        userInput.close();
-        break;
-    }
-
-    if (userSelection == 3) {
-        System.out.println("");
-        userInput.close();
-        break;
-    }
-
-    if (userSelection == 4) {
-        System.out.println("");
-        userInput.close();
-        break;
-    }
 
     if (userSelection == 5) {
         System.out.println("Chocolate Bar Plaza is melting");
