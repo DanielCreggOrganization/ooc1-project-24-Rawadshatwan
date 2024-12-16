@@ -1,23 +1,5 @@
 package ChocolatePlaza;
 
-public abstract class ChocolateBar {
-
-    // variables
-     int id;
-     String name;
-     float priceEur;
-     boolean filling = true;
-
-    // abstract methods
-    abstract double sales();
-    abstract void display();
-
-    // static method
-    public static void displayscreen(){
-        System.out.println("Sales =");
-    }
-
-}
     // constant
     public interface InnerChocolateBar {
         final double sugar = 5; 
@@ -34,70 +16,66 @@ public abstract class ChocolateBar {
         public static void displaycoco() {
             System.out.println("Coco" + coco);
         }
-}
-    
+} 
 
-public class SuperBar extends DairyMilk {
-    
-    double Hazelnut, Peanuts;
 
-    // constructicons
-    public SuperBar(int id, String name, float priceEur, boolean filling){
-          this.id = id;
-          this.name = name;
-          this.priceEur = priceEur;
-          this.filling = filling;
-    }
-    
-    // overload constructicons
-    public SuperBar(int id, String name, float priceEur, boolean filling, double Hazelnut){
-        this(id, name, priceEur, filling);
-        this.Hazelnut = Hazelnut;
-    }
-    
-    @Override
-    double sales(){
-        return 110020304;
-    }
+// polymofeism at work 
+ChocolateBar[] chocolateBars = new ChocolateBar[3];
 
-    @Override
-    void display(){
-        System.out.println("Name: " + name);
-        System.out.println("Id: " + id);
-        System.out.println("Price: " + priceEur);
-        System.out.println("Filling: " + filling);
-    }
+chocolateBars[0] = new SuperBar(0, "", 0, true, 0);
 
-    @Override
-    public String toString(){
-        return "\nId: " + id +
-                "\nName: " + name +
-                "\nPrice: " + priceEur +
-                "\nFilling: " + filling +
-                this.sales() + "\n";
-    }
-    
-    public static void main(String[] args) {
-        SuperBar Flake = new SuperBar(0 , null, 0, false);
-        //using print overide toString methods
-        System.out.println(Flake.toString());
-    }
+chocolateBars[1] = new OuterChocolateBar(0, "", 0, true, 0);
+
+chocolateBars[2] = new EvilChoclateBar(0, "", 0, true, 0);
+
+// when it loops it I increase but when it surpass 3 it closes
+for(int i =0; i < ChocolateBar.length; i++) {
+    chocolateBar[i].display();
 }
 
-   public class OuterChocolateBar extends Maltesers {
-   
-    double Hazelnut, Peanuts, Coconut;
+Kitkat Chunk = new Kitkat();
+System.out.println(Chunk.getKitkat());
 
-      // constructicons
-      public OuterChocolateBar(int id, String name, float priceEur, boolean filling, double Hazelnut){
+public abstract class Maltesers extends ChocolateBar {
+    int numChocolate;
+
+}
+
+public abstract class DairyMilk extends ChocolateBar {
+     int numChocolate;
+
+}
+
+public final class Hersey extends ChocolateBar {
+     int numChocolate;
+     double fat; 
+
+     public Hersey(int id, String name, float priceEur, int numChocolate){
         this.id = id;
         this.name = name;
         this.priceEur = priceEur;
-        this.filling = filling;
-        this.Hazelnut = Hazelnut
+        this.numChocolate = numChocolate;
      }
 
-     //DisplayManuel
+     @Override
+     double sales(){
+         return 110047839;
+     } 
+
+     @Override
+     void display(){
+         System.out.println("Name: " + name);
+         System.out.println("Id: " + id);
+         System.out.println("Price: " + priceEur);
+         System.out.println("numChocolate: " + numChocolate);
+     }
+
+     public static void main(String[] args) {
+        
+        Hersey Raisin = new Hersey(0, "", 0, 0);
+
+     Raisin.display();   
+     }
+
+
 }
-
-
