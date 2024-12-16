@@ -1,0 +1,2 @@
+the code will work if use in other software but with gitpod it doesn't the code was not scource from AI as i am not that desperate and will work with out the use of if
+the code sould do thing automaticly
